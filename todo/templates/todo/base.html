@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<style>
+    .page{
+      width: 1000px;
+      margin:auto;
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      padding-top: 10px;
+    }
+    .sec{
+      margin-left: 50px;
+      margin-right: 50px;
+    } 
+    
+    body {
+	margin: 0;
+	background: rgb(234, 247, 214);
+	padding-top: 50px;
+    }
+    
+
+</style>
+<html>
+    <head>
+        <title>Todo List</title>
+        <!-- CSS And JavaScript -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+        <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+        <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
